@@ -5,7 +5,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[9pt, a4paper]{article}
+\documentclass[9pt, a4paper, pstricks]{article}
 \usepackage{fontspec}
 
 % DOCUMENT LAYOUT
@@ -39,7 +39,9 @@
 \setlength{\marginparsep}{7pt}
 \reversemarginpar
 
-\newcommand{\tp}{{\sc tp}}
+\newcommand{\tp}{{\tikz\draw[black,fill=black] (0,0) circle (.5ex);}}
+\newcommand{\ttp}{{\tikz\draw[black,fill=black] (0,0) circle (.5ex);}}
+\newcommand{\tpp}{{\tikz\draw[black,fill=black] (0,0) circle (.5ex);}}
 \newcommand{\nth}{\textsuperscript{th}~}
 \newcommand{\nd}{\textsuperscript{nd}~}
 \newcommand{\st}{\textsuperscript{st}~}
@@ -88,6 +90,8 @@
 \hyphenation{Chi-ca-go}
 \hyphenation{a-da-pta-ble}
 
+\usepackage{tikz}
+
 % DOCUMENT
 \begin{document}
 
@@ -96,13 +100,13 @@
 % \color{coolwhite}
 
 {\huge\sc\color{feup}{\addfontfeature{LetterSpace=3.0} hugo sereno ferreira, phd}}\\
-{\small {\scshape  {\bfseries birth}: 7/1980 \hspace{7.5mm} {\bfseries e}: hugo@shiftforward.eu} \hspace{7mm} {\bfseries t}: 220301567}\\
+{\small {\scshape  {\bfseries birth}\hspace{2mm}7/1980 \hspace{7mm} {\bfseries e}\hspace{2mm}hugo@shiftforward.eu \hspace{7mm} {\bfseries t}\hspace{2mm}220301567}}\\
 
-\marginimage{\small Professor (5yrs) at {\sc feup}, researcher (6yrs) and entrepreneur with 13+ years of professional experience, 20+ published works (\emph{h-index 6}, \emph{i-index 3}), and 20+ MSc supervisions, focused in high-quality, adaptable, large-scale, \emph{big-data} software solutions. His career encompasses projects for the portuguese and international military, local government and privately held businesses. Today he specialises in Object-Oriented/Functional Programming, Architecture \amper~Design Patterns, and Agile Methodologies. First student to be jointly awarded a Ph.D. (with distinction) in \emph{Computer Science} by the Universities of Porto {\sc (up)}, Minho {\sc (um)} and Aveiro {\sc (ua)}, he held a \emph{postdoc} research position at \acr{inesc tec} (2yrs).
+\years{\vspace{-4mm}\\\hspace*{-6mm}\includegraphics[]{qrcode.eps}}\marginimage{\small Professor (6yrs) at {\sc feup}, researcher (7yrs) and entrepreneur with 14+ years of professional experience, 20+ published works (\emph{h-index 6}, \emph{i-index 5}), and 20+ MSc supervisions, focused in high-quality, adaptable, large-scale, \emph{big-data} software solutions. His career encompasses projects for the portuguese and international military, local government and privately held businesses. Nowadays he focus on Object-Functional Programming, Architecture \amper~Design Patterns, and Machine Learning. First student to be jointly awarded a Ph.D. (with \emph{distinction}) in \emph{Computer Science} by the Universities of Porto {\sc (up)}, Minho {\sc (um)} and Aveiro {\sc (ua)}, he later held a \emph{postdoc} research position at \acr{inesc tec} (1.5yrs) on \emph{Large Scale Software Systems} for \emph{Ambient Assisted Living}.
 
 \vspace{1mm}After receiving a \emph{LicEng} degree in \emph{Informatics and Computation Engineering}, he performed military \rnd for \acr{nato} at \emph{ParadigmaXis, S.A.} There he progressively assumed the roles of developer, team leader, software architect, and project manager in several government and privately held projects. His university teaching career started shortly after becoming a doctorate candidate in \emph{meta-programming} and \emph{model-driven software engineering} (2007), mainly at the Faculty of Engineering of the University of Porto (\acr{feup}).
 
-\vspace{1mm}Early 2011 he co-founded \emph{Shiftforward} with Paulo Cunha, a strategy and technology consultancy company specialised in big-data software infrastructures for the Online Advertising industry. Shiftforward's business model is now evolving into a \emph{framework-as-a-service}, lead by its flag product, the \emph{AdForecaster}: a state-of-the-art forecasting engine targeted both to the supply and demand side, able to predict the performance of multiple campaigns with arbitrary segments and targeting rules, in systems with billions of impressions (tested from $10^9$ to $10^{12}$), and simulate alternative \emph{``what-if''} scenarios in just a few seconds.}
+\vspace{1mm}Early 2011 he co-founded \emph{Shiftforward} with Paulo Cunha, a strategy and technology consultancy company specialised in big-data software infrastructures for the Online Advertising industry. Shiftforward's business model is now evolving into a \emph{framework-as-a-service}, lead by its flag products, the \emph{AdStax} and the \emph{AdForecaster}, a state-of-the-art forecasting engine targeted both to the supply and demand side, able to predict the performance of multiple campaigns with arbitrary segments and targeting rules, in systems with billions of impressions (tested from $10^9$ to $10^{12}$), and simulate alternative \emph{``what-if''} scenarios in just a few seconds.}
 
 %%\hrule
 \section*{Professional experience}
@@ -112,7 +116,7 @@
 \years{\current~2011 ---}\emph{Co-Founder \amper~Chief Technology Officer} ({\sc cto}), Shiftforward, Lda.~\inurl{http://shiftforward.eu}\\
 \years{\current~2013 ---}\emph{Assistant Professor}, {\sc feup} Faculty of Engineering, University of Porto~\inurl{http://www.fe.up.pt} \\
 \years{\current~2011 ---}\emph{Collaborating Lecturer}, {\sc flup} Faculty of Arts, University of Porto~\inurl{http://www.letras.up.pt} \\
-\years{\current~2009 ---}\emph{Collaborating Researcher}, {\sc inesc} Instituto de Engenharia de Sistemas e Computadores do Porto
+\years{\current~2009 ---}\emph{Senior Researcher}, {\sc inesc} Instituto de Engenharia de Sistemas e Computadores do Porto
 
 \subsection*{past experience in academy}
 \noindent
@@ -153,7 +157,7 @@
 
 \noindent
 \years{2014}Nuno Flores, Ademar Aguiar, Hugo Sereno Ferreira,~\emph{``The Concept of Ba Applied to Software Knowledge''}, Proceedings of the 36\nth International Conference on Software Engineering {\sc icse'2014}.\\
-\years{2013}Tiago Babo, Vânia Guimarães, Hugo Sereno Ferreira,~\emph{``Smartphone Based Fall Prevention Exercises''}, Proceedings of the 15\nth {\sc ieee} International Conferences on e-Health Networking, Application~\amper~Services {\sc (healthcom 2013)}. Lisbon, Portugal.\\
+\years{2013}Bruno Ferreira, Vânia Guimarães, Hugo Sereno Ferreira,~\emph{``Smartphone Based Fall Prevention Exercises''}, Proceedings of the 15\nth {\sc ieee} International Conferences on e-Health Networking, Application~\amper~Services {\sc (healthcom 2013)}. Lisbon, Portugal.\\
 \years{2013}Angelo Martins, Tiago Boldt Sousa, João Pascoal Faria, Hugo Sereno Ferreira,~\emph{``Architecture for an {\sc aal} Ecosystem''}, Proceedings of the {6\nth International C* Conference on Computer Science~\amper~Software Engineering}. Porto, Portugal.\\
 \years{\current~2012}Tiago Boldt Sousa, Hugo Sereno Ferreira,~\emph{``Object-Functional Patterns: Re-Thinking Development in a Post-Functional World''}, Proceedings of {\sc sedes'2012} at the 8\nth International Conference on the Quality of Information and Communications Technology. Lisbon, Portugal. {\color{feup} \emph{Best Paper Award.}}\\
 \years{2012}Sandra Prescher, Alan Bourke, Friedrich Koehler, Angelo Manuel Martins, Hugo Sereno Ferreira, Tiago Boldt Sousa, Rui Castro, António Santos, Marc Torrent Poch, Sergi Gomis Gascó, Hospedales Margarita, John Nelson,~\emph{``A Ubiquitous Ambient Assisted Living Solution to Promote Safer Independent Living in Older Adults Suffering from Co-morbidity''}, Proceedings of the 34\nth Annual International Conference of the {\sc ieee} Engineering in
@@ -205,31 +209,31 @@ Medicine and Biology Society ({\sc embc}'12). California, USA.\\
 \clearpage
 \section*{\years{2008 ---}Teaching}
 
-\hspace{-1.9mm}\begin{tabular}{ p{6.3cm} c c c c c c }
-  & 08-09 & 09-10 & 10-11 & 11-12 & 12-13 & 13-14 \vspace{1mm}\\
+\hspace{-1.9mm}\begin{tabular}{ p{6.3cm} c c c c c c c }
+  & {\small 07-08} & {\small 08-09} & {\small 09-10} & {\small 10-11} & {\small 11-12} & {\small 12-13} & {\small 13-14} \vspace{1mm}\\
   \multicolumn{7}{l}{\color{feup}\sc master in informatics and computing engineering · feup · 5 years\vspace{0.2cm}} \\ 
-  Agile Software Development Methodologies & - & - & - & \tp & \tp & \tp \\
-  Formal Methods in Software Engineering   & \tp & \tp & \tp  &  - & - & - \\
-  {\sc is/se} Seminars 					   & - & - &  - & \tp &  -   &  -   \\
-  Object-Oriented Programming Laboratory   &    - &   -  & \tp     &   -  &   -  & \tp \\
-  Operating Systems 					   & -    & \tp &     -    &    - &  -   &  -   \\
-  Project Management Laboratory 		   &  -   &  -   & {\sc p} & -    &  -   &   -  \\
-  Software Engineering 					   & \tp &   -  &   -      &  -   & \tp & \tp \\
-  Software Engineering Laboratory 		   & \tp &    - &   -      &   -  &  -   & -    \\
+  Agile Software Development Methodologies & · & ·   & ·   & ·    & \tp  & \tp  & \tp  \\
+  Formal Methods in Software Engineering   & · & \tp & \tp & \tp  & ·    & ·    & ·    \\
+  Software Engineering Seminars 		   & · & ·   & ·   & ·    & \tp  & ·    & ·    \\
+  Object-Oriented Programming Laboratory   & · & ·   & ·   & \tp  & ·    & ·    & \tp  \\
+  Operating Systems 					   & · & ·   & \tp & ·    & ·    & ·    & ·    \\
+  Project Management Laboratory 		   & · & ·   & ·   & \tpp & ·    & ·    & ·    \\
+  Software Engineering 					   & · & \tp & ·   & ·    & ·    & \tp  & \tp  \\
+  Software Engineering Laboratory 		   & · & \tp & ·   & ·    & ·    & ·    & ·    \\
   \\
   \multicolumn{7}{l}{\color{feup}\sc master in electrical and computers engineering · feup · 5 years\vspace{0.2cm}} \\
-  Programming II 						   &  -   &  -   &     -    & {\sc t\amper p} & {\sc t\amper p} & {\sc p} \\
-  Formal Methods in Software Engineering   & \tp & \tp & \tp     &   -  &   -  &   -  \\
-  Operating Systems 					   &  -   &  -   &   -      &  -   &   -  & \tp \\
-  \\
-  \multicolumn{7}{l}{\color{feup}\sc post-graduation in enterprise application engineering · isep · 1 year\vspace{0.2cm}} \\
-  Agile Methodologies in Software Engineering & - & - & {\sc p} & - & - & - \\
+  Programming 2 						   & · & ·   & ·   & ·    & \ttp & \ttp & \tpp \\
+  Formal Methods in Software Engineering   & · & \tp & \tp & \tp  & ·    & ·    & ·    \\
+  Operating Systems 					   & · & ·   & ·   & ·    & ·    & ·    & \tp  \\
   \\
   \multicolumn{7}{l}{\color{feup}\sc licenciate in information science · feup \amper~flup · 3 years\vspace{0.2cm}} \\
-  Information Systems Analysis II & - & - & - & {\sc p} & {\sc p} & {\sc p} \\
+  Information Systems Analysis 2          & · & ·   & ·   & ·    & \tpp & \tpp & \tpp \\
+  \\
+  \multicolumn{7}{l}{\color{feup}\sc post-graduation in enterprise application engineering · isep · 1 year\vspace{0.2cm}} \\
+  Agile Methodologies in Software Engineering & · & ·& ·   & \tpp & ·    & ·    & ·    \\
   \\
   \multicolumn{7}{l}{\color{feup}\sc licenciate in informatics engineering · istec · 3 years\vspace{0.2cm}}\\
-  Database Management Systems & {\sc t\amper tp} & - & - & - & - & - \\
+  Database Management Systems              & \ttp & · & ·  & ·    & ·    & ·    & ·    \\
 \end{tabular}
 
 
@@ -269,7 +273,9 @@ Medicine and Biology Society ({\sc embc}'12). California, USA.\\
 \noindent\years{2012 --- 13}Luís Fonseca, \emph{Object-Functional Pattern Variants of Adaptive Object-Models} at {\sc inesc tec}.
 
 \subsection*{other educational~\amper~teaching services}
-\noindent\years{2013}Organizer, \emph{``Mummy, daddy, I shrunk my computer!!!''}. An introduction to the RaspberryPI, electronics and programming, ages 12–15 @ Universidade Júnior \inurl{http://universidadejunior.up.pt}\\
+\noindent \years{2014}Organizer, \emph{``My first 3D film''}, 1\st ed. An introduction to visual programming languages using Alice, ages 12–15 @ Universidade Júnior \\
+\years{2014}Organizer, \emph{``Mummy, daddy, I shrunk my computer!!!''}. 2\nd ed. An introduction to the RaspberryPI, electronics and programming, ages 12–15 @ Universidade Júnior \\\
+\years{2013}Organizer, \emph{``Mummy, daddy, I shrunk my computer!!!''}, 1\st ed. \inurl{http://universidadejunior.up.pt} \\
 \years{2010}Organizer and Lecturer, \emph{``An Introduction to UML 2.x''}. 10 students @ Criticial Software, S.A.
 
 %\hrule
@@ -292,13 +298,14 @@ Medicine and Biology Society ({\sc embc}'12). California, USA.\\
 
 \subsection*{program commitees \amper~reviews}
 \noindent
-\years{2014}\emph{PC Member}. The Science and Engineering of Software ({\sc soft-pt @ inforum 2014}) \\
+\years{2014}\emph{PC Member}. 10\nth Latin-American Conf. on Pattern Languages of Prog. ({\sc sugarloafplop} 2014) \\ 
+\years{2014}\emph{PC Member}. Software Engineering and Science ({\sc soft-pt @ inforum 2014}) \\
 \years{2014}\emph{PC Member}. 9\nth Int. Conf. on the Quality of Information and Communications Tech. ({\sc quatic} 2014)\\
-\years{2014}\emph{PC Member}. Workshop of Agile Software Development Techniques at 14\nth International Conference on Computational Science and Its Applications ({\sc iccsa} 2014)\\
+\years{2014}\emph{PC Member}. Workshop of Agile Software Development Techniques at the 14\nth International Conference on Computational Science and Its Applications ({\sc iccsa} 2014)\\
 \years{2013}\emph{PC Member}. 5\nth Int. Workshop on Flexible Modeling Tools {(\sc flexitools @ splash 2013)}\\
 \years{2013}\emph{PC Member}. MiniPLoP Brasil {\sc ime/usp}\\
 \years{2013}\emph{Reviewer}. 18\nth European Conference on Pattern Languages of Programs {(\sc europlop 2013)}\\
-\years{2013}\emph{Book Reviewer}. Alvin Alexander, \emph{``Scala Cookbook''}, O'Reilly Media, Inc.\\
+\years{2013}\emph{Technical Review}. Alvin Alexander, \emph{``Scala Cookbook''}, O'Reilly Media, Inc.\\
 \years{2013}\emph{PC Member}. Wavefront Experience at the 4\nth annual {\sc splash} conference\\
 \years{2012}\emph{Reviewer}. {\sc ieee} Transactions on Software Engineering {(\sc tsm)}\\
 \years{2012}\emph{PC Member}. 8\nth Int. Conf. on the Quality of Information and Communications Tech. ({\sc quatic} 2012)\\
@@ -357,7 +364,7 @@ Architecture, design and implementation of an infrastructure to develop {\sc lc2
 Chief Technology Officer {(\sc cto)}. A platform that effeciently simulates complete browser interactions with advertising platforms at a very large scale (over 100m unique users) with multiple interactions with the system. It can also simulate server-to-server connections for testing {\sc rtb} Clients and Servers at very high requests per second (over 50k). Technologies: Scala, Akka, {\sc jvm}, Amazon {\sc ec2}. \\
 \years{\current~2012 ---}{\sc ad-forecaster, shiftforward} \emph{cf.} {\sc sifide 0694/2013-e}~\inurl{http://www.adforecaster.com}\\
 Chief Technology Officer {(\sc cto)}. A next-generation forecasting engine for online ad campaigns that overcomes key limitations of existing forecast engines, by allowing accurate prediction of future ad impressions traffic levels and campaign inventory availability using unlimited number of targeting variables, including geo, keywords, key-values, cookies, and multiple frequency capping groups at banner, booking, line item or campaign level. Technologies: Scala, Akka, {\sc jvm}, Amazon {\sc ec2}. \\
-\years{2007 --- 10}{\sc oghma, paradigmaxis} \\
+\years{2007 --- 10}{\sc oghma, paradigmaxis} \emph{cf.} {\sc sfrh/bde/33298/2008} \\
 One of the results from my Ph.D. work, it is the current main infrastructure of several production-level Information Systems developed at ParadigmaXis, including Locvs, Zephyr and {\sc gisa}. Technologies: {\sc c\#}, SQLite, {\sc xml}.
 
 \subsection*{Commercial Projects}
