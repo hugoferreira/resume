@@ -10,6 +10,7 @@
 
 % DOCUMENT LAYOUT
 \usepackage{geometry}
+\usepackage{changepage}
 \geometry{a4paper, textwidth=5.5in, textheight=9.7in, marginparsep=7pt, marginparwidth=.6in,left=4cm}
 \setlength\parindent{0in}
 
@@ -79,7 +80,8 @@
 
 % COLORS
 \usepackage[table]{xcolor}
-\definecolor{feup}{cmyk}{0.2,0.9,1.0,0.2}
+%\definecolor{feup}{cmyk}{0.2,0.9,1.0,0.2}
+\definecolor{feup}{rgb}{0.7,0.0,0.0}
 
 % INVERTED COLORS
 % \definecolor{feup}{cmyk}{0,0,0,0}
@@ -94,8 +96,29 @@
 % HYPHENATION
 \hyphenation{Chi-ca-go}
 \hyphenation{a-da-pta-ble}
+\hyphenation{Re-Think-ing}
 
 \usepackage{tikz}
+\usepackage{booktabs}
+
+% SPARKLINES
+
+\RequirePackage{sparklines}
+
+\colorlet{sparkspikecolor}{feup}
+\setlength{\sparkspikewidth}{5pt}
+
+\newcommand{\ratiofivespark}[8]{
+	\begin{sparkline}{6}
+	  \sparkspike  .05 \ratio{#2}{#1}
+	  \sparkspike  .3 \ratio{#3}{#1}
+	  \sparkspike  .55 \ratio{#4}{#1}
+	  \sparkspike  .80 \ratio{#5}{#1}
+	  \sparkspike 1.05 \ratio{#6}{#1}
+    \sparkspike 1.30 \ratio{#7}{#1}
+    \sparkspike 1.55 \ratio{#8}{#1}
+	\end{sparkline}
+}
 
 % DOCUMENT
 \begin{document}
@@ -154,7 +177,7 @@
 \years{2008}Best paper award for Hugo Sereno Ferreira, Filipe Correia, Leon Welicki,~\emph{``Patterns for Data and Metadata Evolution in Adaptive Object Models''}, {\sc plop @ oopsla 2008}\\
 \years{2004 --- 11}{\sc nato}-secret security clearance for military \rnd
 
-\section*{Publications \amper~divulgation\hfill{\href{http://scholar.google.pt/citations?user=bW-JHDEAAAAJ&hl=en}{\small\sc {\bfseries bibliometrics}~~~citations 114 · h-index 7 · i10-index 6}}}
+\section*{Publications\hfill{\href{http://scholar.google.pt/citations?user=bW-JHDEAAAAJ&hl=en}{\small\sc i10-index 6 · h-index 7 · citations 115~~~\ratiofivespark{45}{7}{15}{14}{23}{19}{33}{4}\hspace{0.45cm}}}}
 
 \subsection*{journal articles~(peer-reviewed)}
 
@@ -200,9 +223,10 @@
 \noindent\years{2010}Adaptive Object-Modeling: Patterns, Tools and Applications. \emph{PhD dissertation}\\
 \noindent\years{2004}Framework for Development of Command \amper~Control Systems. \emph{LicEng dissertation}
 
-\subsection*{talks \amper~shows}
+\section*{Invited talks, Shows \amper~Interviews}
 
 \noindent
+\years{2015}\emph{The Peter Fatality: Why People Rise to the Level of their Incompetence}, Panel @ Commit Porto, Faculty of Engineering, University of Porto\\
 \years{2015}\emph{ShiftForward}, JobIT 2015, Faculty of Engineering, University of Porto\\
 \years{2015}\emph{Software and Services}, Panel, 8\nth Congress on Services and Management Engineering ({\sc cesg 2014})\\
 \years{2014}\emph{ShiftForward}, JobIT 2014, Faculty of Engineering, University of Porto\\
@@ -220,17 +244,20 @@
 
 \section*{Teaching}
 
-\newcolumntype{C}[1]{>{\centering\hspace{0pt}}m{#1}}
+\begin{adjustwidth}{-1.75cm}{}
 
+\newcolumntype{C}[1]{>{\centering\hspace{0pt}}m{#1}}
 \hspace{-1.9mm}\begin{tabular}{ p{6.3cm} c c c c c c c c c }
-  & {\scriptsize 07-08} & {\scriptsize 08-09} & {\scriptsize 09-10} & {\scriptsize 10-11} & {\scriptsize 11-12} & {\scriptsize 12-13} & {\scriptsize 13-14} & {\scriptsize 14-15} & {\scriptsize 15-16} \vspace{1mm}\\
+  & \multicolumn{6}{c}{\sc\footnotesize assistant lecturer} & \multicolumn{3}{c}{\sc\footnotesize assistant professor} \\
+  \cmidrule(lr){2-7} \cmidrule(lr){8-10}
+  & {\footnotesize 07-08} & {\footnotesize 08-09} & {\footnotesize 09-10} & {\footnotesize 10-11} & {\footnotesize 11-12} & {\footnotesize 12-13} & {\footnotesize 13-14} & {\footnotesize 14-15} & {\footnotesize 15-16} \vspace{1mm}\\
   \multicolumn{7}{l}{\color{feup}\sc integrated master in informatics and computing engineering · feup · 5 years\vspace{0.2cm}} \\
   Agile Software Development Methodologies & · & ·   & ·   & ·    & \tp  & \tp  & \tp  & ·   & ·   \\
   Distributed Systems              		     & · & ·   & ·   & ·    & ·    & ·    & ·    & ·   & \tp \\
   Formal Methods in Software Engineering   & · & \tp & \tp & \tp  & ·    & ·    & ·    & \tp & \tp \\
   Software Engineering Seminars 		       & · & ·   & ·   & ·    & \tp  & ·    & ·    & ·   & ·   \\
-  Object-Oriented Programming Laboratory   & · & ·   & ·   & \tp  & ·    & ·    & \tp  & ·   & ·   \\
-  Operating Systems 					             & · & ·   & \tp & ·    & ·    & ·    & ·    & ·   & ·   \\
+  Object-Oriented Programming Laboratory   & · & ·   & ·   & \tp  & ·    & ·    & \tp  & ·   & \tp \\
+  Operating Systems 					             & · & ·   & \tp & ·    & ·    & ·    & ·    & ·   & \tp \\
   Project Management Laboratory 		       & · & ·   & ·   & \tpp & ·    & ·    & ·    & \tp & ·   \\
   Software Engineering 					           & · & \tp & ·   & ·    & ·    & \tp  & \tp  & \tp & \tp \\
   Software Engineering Laboratory 		     & · & \tp & ·   & ·    & ·    & ·    & ·    & ·   & \tp \\
@@ -253,6 +280,7 @@
   Database Management Systems              & \ttp & ·& ·   & ·    & ·    & ·    & ·    & ·   & ·   \\
 \end{tabular}
 
+\end{adjustwidth}
 
 \section*{Educational services}
 
@@ -406,11 +434,11 @@ Project Leader and Senior Consultant for {\sc im3dical} re-engineering of its me
 \years{2012}{\sc hl7 integration, im3dical} \\
 Project Leader and Senior Consultant for {\sc im3dical} integration with {\sc hl7}, developed at {\sc inesc} Porto. Technologies: Microsoft\reg~BizTalk, {\sc xml}, {\sc hl7}, {\sc mllp}. \\
 \years{2011 --- 11}{\sc coolbiz: trading system, banco carregosa} \\
-Software Quality Engineer for a back-end and front-end financial trading system for Banco Carregosa, developed at ParadigmaXis. Technologies: {\sc \cpp}, Apache {\sc qpid}, {\sc amqp}, {\sc qt}, {\sc xml}. \\
+Software Quality Engineer for a back-end and front-end financial trading system for \emph{Banco Carregosa}, developed at ParadigmaXis. Technologies: {\sc \cpp}, Apache {\sc qpid}, {\sc amqp}, {\sc qt}, {\sc xml}. \\
 \years{2009 --- 10}{\sc smqvu: urban life quality, cmp} \\
-Analysis and development of an Information System for Câmara Municipal do Porto – Gabinete de Estudos e Projectos. Supports the assessment of urban life quality attributes of the city of Porto, by providing a centralized tool to collect, analyze and synthesize statistical data over hundreds of indexes. Technologies: {\sc c\#}, {\sc wpf}, Oracle database 11g, SQLite, {\sc qt}, {\sc xml}. \\
+Analysis and development of an Information System for \emph{Câmara Municipal do Porto – Gabinete de Estudos e Projectos}. Supports the assessment of urban life quality attributes of the city of Porto, by providing a centralized tool to collect, analyze and synthesize statistical data over hundreds of indexes. Technologies: {\sc c\#}, {\sc wpf}, Oracle database 11g, SQLite, {\sc qt}, {\sc xml}. \\
 \years{2007 --- 10}{\sc locvs: architectural and archaeological heritage, cmp} \\
-Analysis and development of an Information System for Câmara Municipal do Porto, Departamento Municipal do Património e Cultura. It supports the full workflow of collection, process, analysis and storage of textual, graphical and geospatial heritage information of the city of Porto. Technologies: {\sc c\#}, {\sc wpf}, Oracle database 11g, SQLite, {\sc arcgis}, {\sc xml}. \\
+Analysis and development of an Information System for \emph{Câmara Municipal do Porto, Departamento Municipal do Património e Cultura}. It supports the full workflow of collection, process, analysis and storage of textual, graphical and geospatial heritage information of the city of Porto. Technologies: {\sc c\#}, {\sc wpf}, Oracle database 11g, SQLite, {\sc arcgis}, {\sc xml}. \\
 \years{2006 --- 07}{\sc geoxis: geo-spatial back-end framework and infrastructure, paradigmaxis} \\
 Design and implementation of an infrastructure for displaying and analysing geospatial data. Used by several partners including (but not limited to): Vodafone, Portugal Telecom, Optimus, Clix and {\sc itp}. Technologies: Python, {\sc \cpp}, {\sc c\#}, {\sc html5}, Javascript, PostgreSQL, PostGIS, {\sc xml}. \\
 \years{2005 --- 06}{\sc mapadventure, paradigmaxis}~\inurl{http://www.mapadventure.com.pt}\\
