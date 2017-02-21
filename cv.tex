@@ -11,7 +11,7 @@
 % DOCUMENT LAYOUT
 \usepackage{geometry}
 \usepackage{changepage}
-\geometry{a4paper, textwidth=5.5in, textheight=9.0in, marginparsep=7pt, marginparwidth=.6in,left=4cm}
+\geometry{a4paper, textwidth=5.5in, textheight=9.2in, marginparsep=7pt, marginparwidth=.6in,left=4cm}
 \setlength\parindent{0in}
 
 % FONTS
@@ -80,15 +80,7 @@
 
 % COLORS
 \usepackage[table]{xcolor}
-%\definecolor{feup}{cmyk}{0.2,0.9,1.0,0.2}
 \definecolor{feup}{rgb}{0.7,0.0,0.0}
-
-% INVERTED COLORS
-% \definecolor{feup}{cmyk}{0,0,0,0}
-% \definecolor{coolblack}{rgb}{0.14,0.12,0.126}
-% \definecolor{coolwhite}{cmyk}{0,0,0,0.2}
-% \usepackage{background}
-% \SetBgContents{}
 
 % HYPERREF
 \hypersetup{linkcolor=feup,citecolor=feup,filecolor=black,urlcolor=feup}
@@ -101,25 +93,6 @@
 \usepackage{tikz}
 \usepackage{booktabs}
 
-% SPARKLINES
-
-\RequirePackage{sparklines}
-
-\colorlet{sparkspikecolor}{feup}
-\setlength{\sparkspikewidth}{5pt}
-
-\newcommand{\ratiofivespark}[8]{
-	\begin{sparkline}{6}
-	  \sparkspike  .05 \ratio{#2}{#1}
-	  \sparkspike  .3 \ratio{#3}{#1}
-	  \sparkspike  .55 \ratio{#4}{#1}
-	  \sparkspike  .80 \ratio{#5}{#1}
-	  \sparkspike 1.05 \ratio{#6}{#1}
-    \sparkspike 1.30 \ratio{#7}{#1}
-    \sparkspike 1.55 \ratio{#8}{#1}
-	\end{sparkline}
-}
-
 % DOCUMENT
 \begin{document}
 
@@ -130,11 +103,11 @@
 {\huge\sc\color{feup}{\addfontfeature{LetterSpace=3.0} hugo sereno ferreira, phd}}\\
 {\small {\scshape  {\bfseries birth}\hspace{2mm}7/1980 \hspace{8mm} {\bfseries e}\hspace{2mm}hugo.sereno@fe.up.pt \hspace{8mm} {\bfseries t}\hspace{2mm}220301567}}\\
 
-\years{\vspace{-4mm}\\\hspace*{-10mm}\includegraphics[scale=1.2]{qrcode.eps}}\marginimage{\small Professor (8yrs) at {\sc feup}, researcher (9yrs) and entrepreneur (5yrs) with 16+ years of professional experience, 25+ published works (\emph{h-index 7}, \emph{i10-index 6}), and 25+ MSc supervisions, focused in high-quality, adaptable, large-scale, \emph{big-data} software solutions. His career encompasses projects for the portuguese and international military, local government and privately held businesses. Nowadays he focus on Object-Functional Programming, Architecture \amper~Design Patterns, and Machine Learning. First student to be jointly awarded a Ph.D. (with \emph{distinction}) in \emph{Computer Science} by the Universities of Porto {\sc (up)}, Minho {\sc (um)} and Aveiro {\sc (ua)}, he later held a \emph{postdoc} research position at \acr{inesc tec} (1.5yrs) on \emph{Large Scale Software Systems} for \emph{Ambient Assisted Living} and is currently a \emph{Senior Researcher} (7yrs).
+\years{\vspace{-4mm}\\\hspace*{-10mm}\includegraphics[scale=1.2]{qrcode.eps}}\marginimage{\small Professor (9yrs) at {\sc feup}, researcher (10yrs) and entrepreneur (5yrs) with 16+ years of professional experience, 25+ published works (\emph{h-index 7}, \emph{i10-index 7}), and 30+ degree-awarding (BSc, MSc, PhD) supervisions, focused in high-quality, adaptable, large-scale, \emph{big-data} software solutions. His career encompasses projects for the portuguese and international military, local government and privately held businesses. Nowadays he focus on Object-Functional Programming, Architecture \amper~Design Patterns, and Machine Learning. First student to be jointly awarded a Ph.D. (with \emph{distinction}) in \emph{Computer Science} by the Universities of Porto (\acr{up}), Minho {\sc (um)} and Aveiro {\sc (ua)}, he later held a \emph{postdoc} research position at \acr{inesc tec} (1.5yrs) on \emph{Large Scale Software Systems} for \emph{Ambient Assisted Living}, where he is currently a \emph{Research Associate}.
 
-\vspace{1mm}After receiving a \emph{LicEng} degree in \emph{Informatics and Computation Engineering}, he performed military \rnd for \acr{nato} at \emph{ParadigmaXis, S.A.} There he progressively assumed the roles of developer, team leader, software architect, and project manager in several government and privately held projects. Early 2011 he co-founded \emph{Shiftforward}, an international strategy and technology consultancy company specialised in \emph{big-data} software solutions for the \emph{Online Advertising} industry.
+\vspace{1mm}After receiving a \emph{LicEng} degree in \emph{Informatics and Computation Engineering}, he performed military \rnd for the North Atlantic Treaty Organization (\acr{nato}) at \emph{ParadigmaXis, S.A.} There he progressively assumed the roles of developer, team leader, software architect, and project manager in several government and privately held projects. Early 2011 he co-founded \emph{Shiftforward}, an international strategy and technology consultancy company specialised in \emph{big-data} software solutions for the \emph{Online Advertising} industry, and acted as the Chief Technology Officer (\acr{cto}) until 2016 (5yrs), successfully raising \acr{1m\$} in funding.
 
-\vspace{1mm}His university teaching career started shortly after becoming a doctorate candidate in \emph{meta-programming} and \emph{model-driven software engineering} (2007), mainly at the Faculty of Engineering of the University of Porto (\acr{feup}), where he is currently an \emph{Assistant Professor} (8yrs).
+\vspace{1mm}His university teaching career started shortly after becoming a doctorate candidate in \emph{meta-programming} and \emph{model-driven software engineering} (2007), mainly at the Faculty of Engineering of the University of Porto (\acr{feup}, since 2008), where he is currently an \emph{Assistant Professor} (9yrs).
 
 %%\hrule
 \section*{Professional experience}
@@ -142,11 +115,12 @@
 \subsection*{currently held positions \amper~affiliations}
 \noindent
 \years{\current~2013 ---}\emph{Assistant Professor}, Faculty of Engineering, University of Porto~\inurl{http://www.fe.up.pt} \\
-\years{\current~2009 ---}\emph{Senior Researcher}, Instituto de Engenharia de Sistemas e Computadores, Tecnologia e Ciência
+\years{\current~2017 ---}\emph{Research Associate}, {\sc inesc tec} Instituto de Engenharia de Sistemas e Computadores, Tecnologia e Ciência
 
 \subsection*{past experience in academy}
 \noindent
 \years{2016}\emph{Collaborating Professor}, {\sc fcup} Faculty of Sciences, University of Porto~\inurl{http://www.fc.up.pt} \\
+\years{2009 --- 17}\emph{Senior Researcher}, {\sc inesc tec} Instituto de Engenharia de Sistemas e Computadores, Tecnologia e Ciência \\
 \years{2008 --- 13}\emph{Assistant Lecturer}, {\sc feup} Faculty of Engineering, University of Porto~\inurl{http://www.fe.up.pt} \\
 \years{2011 --- 13}\emph{Collaborating Lecturer}, {\sc flup} Faculty of Arts, University of Porto~\inurl{http://www.letras.up.pt} \\
 \years{2011 --- 12}\emph{Postdoctoral Researcher}, {\sc inesc} Instituto de Engenharia de Sistemas e Computadores do Porto\\
@@ -179,17 +153,22 @@
 \years{2004 --- 11}{\sc nato}-secret security clearance for military \rnd
 
 % \section*{Publications\hfill{\href{http://scholar.google.pt/citations?user=bW-JHDEAAAAJ&hl=en}{\small\sc h-index 7 · i10-index 6 · citations 126~~~\ratiofivespark{45}{6}{15}{14}{23}{20}{34}{11}\hspace{0.45cm}}}}
-\section*{Publications\hfill{\href{http://scholar.google.pt/citations?user=bW-JHDEAAAAJ&hl=en}{\small\sc h-index 7 · i10-index 6 · citations 137}}}
+\section*{Publications\hfill{\href{http://scholar.google.pt/citations?user=bW-JHDEAAAAJ&hl=en}{\small\sc h-index 7 · i10-index 7 · citations 156}}}
 
 \subsection*{journal articles~(peer-reviewed)}
 
-\noindent\years{2010}Hugo Sereno Ferreira, Ademar Aguiar, João Pascoal Faria,~\emph{``Adaptive Object-Models: A Research Roadmap''}, International Journal On Advances in Software, Vol 3.
+\noindent
+\publication{2012}{HH Nap, I Bierhoff, A Ferreiro, A Català, A Samà, C Gálvez-Barrón, A Rodríguez-Molinero, HS Ferreira, A Martins, M Antomarini, F Cesaroni, C Sdogati, L Carvalho, R Castro, J Spallek}{Market driven implementation of the eCAALYX solution}{Gerontechnology (12) Volume 2.}\\
+\years{2010}Hugo Sereno Ferreira, Ademar Aguiar, João Pascoal Faria,~\emph{``Adaptive Object-Models: A Research Roadmap''}, International Journal On Advances in Software, Vol 3.
 
 \subsection*{conference articles~(peer-reviewed)}
 
 \noindent
-\publication{2016}{João Silva, Hugo Sereno Ferreira}{Bluetooth Based Warning System for Ambient Assisted Living}{Proceedings da 9ª Edição Encontro Investigação Jovem. Porto, Portugal.}\\
-\publication{2015}{Filipe Oliveira, Hugo Sereno Ferreira, Tiago Boldt Sousa}{Exploring the Scala Macro System for Compile Time Model-Based Generation of Statically Type-Safe REST Services}{Proceedings of the 2\nd International Conference on Advances and Trends in Software Engineering. Lisbon, Portugal.}\\
+\publication{\current 2017}{João Pedro Dias, Hugo Sereno Ferreira}{Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites}{Proceedings of the 8th International Conference on Ambient Systems, Networks and Technologies {\sc (ant-2017)}. Madeira, Portugal.}\\
+\publication{2017}{João Pedro Dias, Hugo Sereno Ferreira}{Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites}{Proceedings da 10ª Edição Encontro Investigação Jovem {\sc (ijup-2017)}. Porto, Portugal.}\\
+\publication{2016}{Tiago Sousa, Hugo Sereno Ferreira, Filipe Correia}{Engineering Software for the Cloud - Patterns and Sequences}{Proceedings of the 11th Latin American Conference on Pattern Languages of Programs. Buenos Aires, Argentina.}\\
+\publication{2016}{João Silva, Hugo Sereno Ferreira}{Bluetooth Based Warning System for Ambient Assisted Living}{Proceedings da 9ª Edição Encontro Investigação Jovem {\sc (ijup-2016)}. Porto, Portugal.}\\
+\publication{2015}{Filipe Oliveira, Hugo Sereno Ferreira, Tiago Boldt Sousa}{Exploring the Scala Macro System for Compile Time Model-Based Generation of Statically Type-Safe {\sc rest} Services}{Proceedings of the 2\nd International Conference on Advances and Trends in Software Engineering. Lisbon, Portugal.}\\
 \publication{2015}{Tiago Boldt Sousa, Filipe Correira, Hugo Sereno Ferreira}{DevOps patterns for software orchestration on public and private clouds}{Proceedings of the 22\nd Conference on Pattern Languages of Programs, Pittsburgh, Pennsylvania, USA.}\\
 \publication{2014}{Luís Fonseca, Tiago Boldt Sousa, Hugo Sereno Ferreira}{Rapid Prototyping and Development Framework for Android with Scala}{Proceedings of the 6\nth Symposium on Informatics. Porto, Portugal.}\\
 \publication{2014}{Omar Castro, Hugo Sereno Ferreira, Tiago Boldt Sousa}{Collaborative Web Platform for UNIX-based Big Data Processing}{Proceedings of the 11\nth International Conference on Cooperative Design, Visualization and Engineering. Seattle, USA. Lecture Notes in Computer Science 8683.}\\
@@ -255,6 +234,8 @@
 
 \subsection*{master degree in informatics engineering supervising · feup}
 \noindent
+\years{2016 --- }Maria João Miranda, \emph{Exploring Visual Programming Patterns from the End-User Perspective} at {\sc feup}.\\
+%\years{2016 --- }Henrique Ferrolho, \emph{} at {\sc feup}.\\
 \years{2015 --- 16}Carlos Teixeira, \emph{DevOps: Pratices, Patterns and Tools} at {\sc feup}. \\
 \years{2015 --- 16}Gabriel Candal, \emph{Exploring Visual Programming Concepts for Probabilistic Programming Languages} at {\sc feup}. \\
 \years{2015 --- 16}Pedro Fernandes, \emph{Framework for Monte Carlo Tree Search-related strategies in Competitive Card Based Games} at {\sc feup}. \\
@@ -310,6 +291,8 @@
 
 \subsection*{degree-awarding juris in informatics engineering~~(excluding supervising juris) · feup}
 \noindent
+\years{2017}\emph{Chair, MSc}. João Oliveira, \emph{Workflow engine for parallel batch processing}\\
+\years{2017}\emph{Chair, MSc}. Pedro Dias Faria, \emph{Test Automation in Continuous Integration for Hardware Validation}\\
 \years{2016}\emph{Chair, MSc}. Luís Amaro, \emph{Sistema de Recomendação de Acções de Melhoria Baseado em Crowd-Sourcing e Aprendizagem Automática}\\
 \years{2016}\emph{Chair, MSc}. Tiago Coelho, \emph{Automação de Testes de Aplicações Móveis sem Necessidade de Programação}\\
 \years{2016}\emph{Chair, MSc}. Vasco Gomes, \emph{Improving Courses Management by Predicting Number of Students}\\
@@ -327,7 +310,8 @@
 
 \subsection*{other degree-awarding juris}
 \noindent
-\years{2015}\emph{Juror, MSc}. Carlos Caldas, \emph{anoBusiness - ferramenta de BPM} @ {\sc fcup}
+\years{2016}\emph{Main Juror, MSc}. Rúben Barros, \emph{DevOps Technologies for Tomorrow} at {\sc isep}. Supervised by \emph{Prof. Angelo Martins}.\\
+\years{2015}\emph{Main Juror, MSc}. Carlos Caldas, \emph{anoBusiness - ferramenta de BPM} @ {\sc fcup}.
 
 \subsection*{grant commitees}
 \noindent\years{2012}Research grant, \emph{Ambient Assisted Living for All}. 18mo @ {\sc inesc tec} \\
@@ -441,23 +425,24 @@ Design and implementation of an application and infrastructure for displaying an
 \hspace{-1.9mm}\begin{tabular}{ p{5.7cm} c c c c c c c c c c }
   & \multicolumn{6}{c}{\sc\footnotesize assistant lecturer} & \multicolumn{4}{c}{\sc\footnotesize assistant professor} \\
   \cmidrule(lr){2-7} \cmidrule(lr){8-11}
-  & {\footnotesize 07-08} & {\footnotesize 08-09} & {\footnotesize 09-10} & {\footnotesize 10-11} & {\footnotesize 11-12} & {\footnotesize 12-13} & {\footnotesize 13-14} & {\footnotesize 14-15} & {\footnotesize 15-16} \vspace{1mm} & {\footnotesize 16-17} \vspace{1mm}\\
+  & {\footnotesize 07-08} & {\footnotesize 08-09} & {\footnotesize 09-10} & {\footnotesize 10-11} & {\footnotesize 11-12} & {\footnotesize 12-13} & {\footnotesize 13-14} & {\footnotesize 14-15} & {\footnotesize 15-16} & {\footnotesize 16-17} \vspace{1mm}\\
   \multicolumn{7}{l}{\color{feup}\sc integrated master in informatics and computing engineering · feup · 5 years\vspace{0.2cm}} \\
   \sigla{mads} Agile Software Development Methodologies & · & ·   & ·   & ·    & \tp  & \tp  & \tp  & ·   & ·   & ·   \\
-	\sigla{diss} Dissertation														 & · & ·   & ·   & \tp  & \tp  & \tp  & \tp  & \tp & \tp & \tp \\
-  \sigla{sdis} Distributed Systems              		     & · & ·   & ·   & ·    & ·    & ·    & ·    & ·   & \tp & \tp \\
+	\sigla{diss} Dissertation														  & · & ·   & ·   & \tp  & \tp  & \tp  & \tp  & \tp & \tp & \tp \\
+  \sigla{sdis} Distributed Systems              		    & · & ·   & ·   & ·    & ·    & ·    & ·    & ·   & \tp & \tp \\
   \sigla{mfes} Formal Methods in Software Engineering   & · & \tp & \tp & \tp  & ·    & ·    & ·    & \tp & \tp & \tp \\
 	\sigla{lpoo} Object-Oriented Programming Laboratory   & · & ·   & ·   & \tp  & ·    & ·    & \tp  & ·   & \tp & \tp \\
-  \sigla{sope} Operating Systems 					             & · & ·   & \tp & ·    & ·    & ·    & ·    & ·   & \tp & \tp \\
-  \sigla{lgp} Project Management Laboratory 		       & · & ·   & ·   & \tpp & ·    & ·    & ·    & \tp & ·   & ·   \\
-	\sigla{esof} Software Engineering 					           & · & \tp & ·   & ·    & ·    & \tp  & \tp  & \tp & \tp & \tp \\
-	\sigla{ldso} Software Engineering Laboratory 		     & · & \tp & ·   & ·    & ·    & ·    & ·    & ·   & \tp & ·   \\
-	\sigla{sesi} Software Engineering Seminars 		       & · & ·   & ·   & ·    & \tp  & ·    & ·    & ·   & ·   & ·   \\
+  \sigla{sope} Operating Systems 					              & · & ·   & \tp & ·    & ·    & ·    & ·    & ·   & \tp & · \\
+  \sigla{lgpr} Project Management Laboratory 		        & · & ·   & ·   & \tpp & ·    & ·    & ·    & \tp & ·   & \tp \\
+  \sigla{asso} Software Architecture								    & · & ·   & ·   & ·    & ·    & ·    & ·    & ·   & ·   & \tp \\
+	\sigla{esof} Software Engineering 					          & · & \tp & ·   & ·    & ·    & \tp  & \tp  & \tp & \tp & \tp \\
+	\sigla{ldso} Software Engineering Laboratory 		      & · & \tp & ·   & ·    & ·    & ·    & ·    & ·   & \tp & ·   \\
+	\sigla{sesi} Software Engineering Seminars 		        & · & ·   & ·   & ·    & \tp  & ·    & ·    & ·   & ·   & ·   \\
 	\\
   \multicolumn{7}{l}{\color{feup}\sc integrated master in electrical and computers engineering · feup · 5 years\vspace{0.2cm}} \\
-	Formal Methods in Software Engineering   & · & \tp & \tp & \tp  & ·    & ·    & ·    & ·   & ·   & ·   \\
-	Operating Systems 					             & · & ·   & ·   & ·    & ·    & ·    & \tp  & ·   & ·   & ·   \\
-  Programming II 						               & · & ·   & ·   & ·    & \ttp & \ttp & \tpp & ·   & ·   & ·   \\
+	\sigla{mfes} Formal Methods in Software Engineering   & · & \tp & \tp & \tp  & ·    & ·    & ·    & ·   & ·   & ·   \\
+	\sigla{sope} Operating Systems 					              & · & ·   & ·   & ·    & ·    & ·    & \tp  & ·   & ·   & ·   \\
+  \sigla{pro2} Programming II 						              & · & ·   & ·   & ·    & \ttp & \ttp & \tpp & ·   & ·   & ·   \\
 	\\
   \multicolumn{7}{l}{\color{feup}\sc degree in computer science · fcup · 3 years\vspace{0.2cm}} \\
   Software Architecture								     & · & ·   & ·   & ·    & ·    & ·    & ·    & ·   & \tpp& ·   \\
@@ -466,10 +451,10 @@ Design and implementation of an application and infrastructure for displaying an
   Software Architecture								     & · & ·   & ·   & ·    & ·    & ·    & ·    & ·   & \tpp& ·   \\
   \\
   \multicolumn{7}{l}{\color{feup}\sc master in services engineering and management · feup · 2 years\vspace{0.2cm}} \\
-  Requirements Engineering for Services    & · & ·   & ·   & ·    & ·    & ·    & ·    & \tp & ·   & ·   \\
+  \sigla{ers} Requirements Engineering for Services    & · & ·   & ·   & ·    & ·    & ·    & ·    & \tp & ·   & ·   \\
   \\
   \multicolumn{7}{l}{\color{feup}\sc degree in information science · feup \amper~flup · 3 years\vspace{0.2cm}} \\
-  Information Systems Analysis 2           & · & ·   & ·   & ·    & \tpp & \tpp & \tpp & ·   & ·   & ·   \\
+  \sigla{asi2} Information Systems Analysis 2           & · & ·   & ·   & ·    & \tpp & \tpp & \tpp & ·   & ·   & ·   \\
   \\
   \multicolumn{7}{l}{\color{feup}\sc post-graduation in enterprise application engineering · isep · 1 year\vspace{0.2cm}} \\
   Agile Software Development Methodologies & · & ·   & ·   & \tpp & ·    & ·    & ·    & ·   & ·   & ·   \\
@@ -478,7 +463,7 @@ Design and implementation of an application and infrastructure for displaying an
   Database Management Systems              & \ttp & ·& ·   & ·    & ·    & ·    & ·    & ·   & ·   & ·   \\
 	\\
   \multicolumn{7}{l}{\color{feup}\sc master in software engineering · feup · 2 years\vspace{0.2cm}}\\
-  Software Architecture and Design         & ·& ·   & ·    & ·    & ·    & ·    & ·   & ·   & ·   & \ttp \\
+  \sigla{ads} Software Architecture and Design         & ·& ·   & ·    & ·    & ·    & ·    & ·   & ·   & ·   & \ttp \\
 \end{tabular}
 
 \end{adjustwidth}
