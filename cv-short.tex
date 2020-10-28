@@ -1,0 +1,146 @@
+%---------------------------------------------------
+% This CV was inspired in Dario Taraborelli template
+%---------------------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper, pstricks]{article}
+\usepackage{fontspec}
+
+% DOCUMENT LAYOUT
+\usepackage{geometry}
+\usepackage{changepage}
+\geometry{a4paper, textwidth=5.5in, textheight=8.8in, marginparsep=7pt, marginparwidth=.6in,left=4cm}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [ItalicFeatures={Ligatures={Common,Rare}}, Numbers={OldStyle}, BoldFont=Hoefler Text Bold SC]{Minion Pro}
+\setmonofont[Scale=0.8]{Monaco}
+
+% ---- CUSTOM SYMBOLS
+\newcommand{\amper}{{\fontspec[Scale=.95]{Hoefler Text}\selectfont\itshape\&}}
+\newcommand{\current}{{\hspace{-0.97em}\color{feup}$\star$}~}
+\newcommand{\since}{{\color{feup}---}}
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\small #1}}
+\newcommand{\bigyears}[1]{\marginnote{#1}}
+\newcommand{\marginimage}{
+%\marginnote{
+%\vspace{-1cm}~\\
+%{\hspace{-2.2cm}\includegraphics[scale=0.5]{photo.jpg}}
+%}
+}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+\newcommand{\tp}{{\tikz\draw[black,fill=black] (0,0) circle (.5ex);}}
+\newcommand{\htp}{{\tikz\draw[feup,fill=feup] (0,0) circle (.5ex);}}
+\newcommand{\ttp}{{\tikz\draw[black,fill=black] (0,0) circle (.5ex);}}
+\newcommand{\tpp}{{\tikz\draw[black,fill=black] (0,0) circle (.5ex);}}
+\newcommand{\nth}{\textsuperscript{th}~}
+\newcommand{\nd}{\textsuperscript{nd}~}
+\newcommand{\st}{\textsuperscript{st}~}
+\newcommand{\rd}{\textsuperscript{rd}~}
+\newcommand{\inurl}[1]{~\{~{\small\url{#1}~}\}}
+\newcommand{\acr}[1]{{\sc #1}}
+\newcommand{\rnd}{{\sc r\amper d}~}
+\newcommand{\smallplus}{\raise.50ex\hbox{\tiny{+}}}
+\newcommand{\smallscplus}{\raise.30ex\hbox{\tiny{+}}}
+\newcommand{\cpp}{c\smallscplus\smallscplus}
+\newcommand{\reg}{\textsuperscript{\textregistered}}
+
+\newcommand{\publication}[4]{\years{#1}#2,~\emph{``#3''}, #4}
+\newcommand{\awardedpub}[4]{\years{\current~#1}#2,~\emph{``#3''}, #4 {\color{feup} \emph{Best Paper Award.}}}
+\newcommand{\tobepub}[4]{\years{\current~#1}#2,~\emph{``#3''}, #4 {\color{feup} \emph{To appear.}}}
+
+%
+\usepackage[final=true]{microtype}
+\linespread{1.1}
+
+% No orphans
+\clubpenalty = 500
+\widowpenalty = 1000
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\color{feup}\rmfamily\mdseries\large}
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize}
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={Curriculum Vitae of Hugo Sereno Ferreira},pdfauthor={Hugo Sereno Ferreira}]{hyperref}
+
+% COLORS
+\usepackage[table]{xcolor}
+\definecolor{feup}{rgb}{0.7,0.0,0.0}
+
+% HYPERREF
+\hypersetup{linkcolor=feup,citecolor=feup,filecolor=black,urlcolor=feup}
+
+% HYPHENATION
+\hyphenation{Chi-ca-go}
+\hyphenation{a-da-pta-ble}
+\hyphenation{Re-Think-ing}
+\hyphenation{Jú-ni-or}
+
+\usepackage{tikz}
+\usepackage{booktabs}
+
+% DOCUMENT
+\begin{document}
+\pagestyle{empty}
+% INVERTED COLORS
+% \pagecolor{coolblack}
+% \color{coolwhite}
+
+%% Metrics
+
+\newcommand{\citations}{435}
+\newcommand{\hindex}{12}
+\newcommand{\iindex}{15}
+\newcommand{\lastupdate}{October 28, 2020}
+
+\newcommand{\totaljournals}{6}
+\newcommand{\totalconferences}{47}
+\newcommand{\totalinternationalconferences}{45}
+\newcommand{\totalnationalconferences}{2}
+\newcommand{\totalpreprints}{5}
+\newcommand{\totalotherpublications}{6}
+\newcommand{\totalothers}{11}
+
+\newcommand{\totalpublications}{64}
+\newcommand{\totalpeerreviewed}{59}
+
+\newcommand{\totalscopus}{37}
+\newcommand{\totalwos}{18}
+\newcommand{\totaldblp}{40}
+
+%%
+
+{\huge\sc\color{feup}{\addfontfeature{LetterSpace=3.0} hugo sereno ferreira, phd}}\\
+{\small {\scshape  {\bfseries birth}\hspace{1.5mm}7/1980 \hspace{4mm} {\bfseries e}\hspace{1.5mm}hugo.sereno@fe.up.pt \hspace{3mm} {\bfseries t}\hspace{1.5mm}220301567}}\hspace{5mm}{\small\scshape {\bfseries orcid.org/}0000-0002-4963-3525}\\
+
+\years{\vspace{-4mm}\\\hspace*{-10mm}\includegraphics[scale=1.2]{qrcode.eps}}\marginimage{\textbf{professor} (since 2008) at {\sc feup}, and \textbf{researcher} (since 2007) at {\sc inesc tec}.}
+
+\vspace{5mm}\textbf{academic background:} 2006, \emph{Licenciatura} in Informatics and Computing Engineering ({\sc leic}), \emph{Framework for Development of Command and Control Systems}, from {\sc feup}; 2011, joint {\sc ph.d.} (\emph{w/ distinction}) in Informatics ({\sc mapi}), \emph{Adaptive Object Modeling: Patterns, Tools and Applications}, from the Universities of Minho, Aveiro and Porto; 2011---12, \textbf{postdoc researcher} at {\sc inesc tec}.
+
+\vspace{5mm}\textbf{scientific research and development:} has \textbf{\totalpublications~publications}, \totalconferences~in conferences with scientific referee, \totaljournals~in refereed journals, and \totalothers~others. \textbf{3~best paper awards}, and \textbf{3 invitations} for extended versions in journals. \totalwos~are indexed in {\sc isi wos}, \totalscopus~in {\sc scopus} and \totaldblp~in {\sc dblp}. Attracted over \textbf{\citations~citations}, resulting in a \textbf{h-index of \hindex~and i10-index of \iindex}. Participated in \textbf{6 scientific projects}, 3 national and 3 European, totaling more than {\sc 30m€} in funding. Reviewer in \textbf{8 periodics}, \textbf{31 (inter)national conferences} and \textbf{2 books}. Involved in the organization of \textbf{14 scientific events}. Member of \textbf{42 examining committees} (1 {\sc ph.d.} and 41 {\sc m.sc.}), 27 as chair, and 15 in external institutions, totaling \textbf{99 interventions} in scientific and professional communities. \textbf{70 (co--)supervisions}, of which 61~{\sc m.sc.} (9 ongoing), 1 finished {\sc ph.d} (2 ongoing), 2 undergraduates, and 4 scholarships. \textbf{research associate} at {\sc inesc tec}. Member of the International Hillside Group, and {\sc feup}'s Software Engineering Research Group.
+
+\vspace{5mm}\textbf{educational activities and experience:} lecturer since 2008 of \textbf{22 different curricular units} (most in the \emph{Software Engineering} domain) in \textbf{4 different institutions}, 19 at {\sc feup}. Participated in the creation of \textbf{4 new curricular units} and \textbf{1 new master degree}. Member of \textbf{2 self-assessment committees} that resulted in the {\sc eur-ace} and {\sc a3es} accreditations of {\sc mieic}. Co-organized \textbf{6 editions of Universidade Júnior}, head of the {\sc mieic} student's laboratory, and former {\sc acm icpc} and {\sc ieee} trainer for competitive programming at {\sc feup}.
+
+\vspace{2mm}\textbf{knowledge transfer:} 14 invited talks, 2 career fairs, and 3 media events. Worked in 2 military {\sc r\amper d} projects for {\sc nato}, 3 research projects in industrial environments, and 8 development and consultancy projects. Co-founded (as {\sc cto}) ShiftForward S.A., incubated in {\sc uptec}, successfully raised {\sc 1m€} in {\sc vc}, and later acquired by Velocidi, Inc. Member of \emph{Coding for Social Impact Labs}, and co-founder of \emph{Software and Beyond}, both \emph{University of Porto} entities. Fomer advisor for the \emph{Founders Founders} co-working space (part of the \emph{ScaleUP Porto} initiative). Reviewer for Portugal Ventures’ \emph{Call on Entrepreneurship}.
+
+\begin{center}
+  \vspace{10mm}
+  \emph{\small{Last updated 28 October 2020\\ Full CV available at http://hugosereno.eu}}
+\end{center}
+\end{document}
